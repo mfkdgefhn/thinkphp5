@@ -17,5 +17,8 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-    'hello/[:name]'=>'index/hello',
+    'hello/[:name]'=>['index/hello',['method'=>'get','ext'=>'html']],
+    'blog/:year/:month' => ['blog/archive', ['method' => 'get'], ['year' => '\d{4}', 'month' => '\d{2}']],
+    'blog/:id'          => ['blog/get', ['method' => 'get'], ['id' => '\d+']],
+    'blog/:name'        => ['blog/read', ['method' => 'get'], ['name' => '\w+']],
 ];
