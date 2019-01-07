@@ -13,12 +13,19 @@ return [
     '__pattern__' => [
         'name' => '\w+',
     ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
+    '[hello]' => [
+//        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
+//        ':name' => ['index/hello', ['method' => 'post']],
     ],
-    'hello/[:name]'=>['index/hello',['method'=>'get','ext'=>'html']],
-    'blog/:year/:month' => ['blog/archive', ['method' => 'get'], ['year' => '\d{4}', 'month' => '\d{2}']],
-    'blog/:id'          => ['blog/get', ['method' => 'get'], ['id' => '\d+']],
-    'blog/:name'        => ['blog/read', ['method' => 'get'], ['name' => '\w+']],
+    'hello/[:name]' => ['index/hello', ['method' => 'get', 'ext' => 'html']],
+//    'blog/:year/:month' => ['blog/archive', ['method' => 'get'], ['year' => '\d{4}', 'month' => '\d{2}']],
+//    'blog/:id'          => ['blog/get', ['method' => 'get'], ['id' => '\d+']],
+//    'blog/:name'        => ['blog/read', ['method' => 'get'], ['name' => '\w+']],
+    'index/:name' => ['index/index/index', ['method' => 'get', 'ext' => 'html']],
+    'hello5/[:name]' => ['index/hello5', ['method' => 'get']],
+    'hello6/[:name]' => ['index/hello6', ['method' => 'get']],
+    'hello7/[:name]' => ['index/hello7', ['method' => 'get']],
+    'hello8/[:name]' => ['index/hello8', ['method' => 'get']],
+    'hello9/[:name]' => ['index/hello9', ['method' => 'get']],
+    'hello10/[:name]' => ['index/hello10', ['method' => 'get']],
 ];

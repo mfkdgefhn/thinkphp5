@@ -10,7 +10,7 @@ namespace app\index\model;
 
 use think\Model;
 
-class vod extends Model
+class Vod extends Model
 {
 // 设置单独的数据库连接
     protected $connection = [

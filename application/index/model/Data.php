@@ -6,7 +6,11 @@
  * Time: 12:29
  */
 
-class Data
+namespace app\index\model;
+
+use think\Model;
+
+class Data extends Model
 {
 
 }
