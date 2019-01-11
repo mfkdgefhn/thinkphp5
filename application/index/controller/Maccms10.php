@@ -20,7 +20,7 @@ class Maccms10 extends Controller
 //        $maccms->vod_name = "火影";
 //        $maccms->save();
 //        print_r('插入成功');
-        $vod = Vod::getByvod_name("%影%");
-        echo $vod;
+//        $vod = Vod::get(999);
+//        echo $vod;
     }
 }

@@ -48,18 +48,31 @@
             border: 1px solid #DFDFDE;
 
         }
+
+        .copyright {
+            position: relative;
+            top: 250px;
+            left: 120px;
+            font-size: 14px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
 
 <h2>创建用户</h2>
 <hr>
-<form method="post" class="form" action="{:url('index/user/add')}">
+<form method="post" class="form" action="{:url('/index/user/add')}">
     昵称：<input type="text" class="text" name="nickname"><br/>
     邮箱：<input type="text" class="text" name="email"><br/>
     生日：<input type="text" class="text" name="birthday"><br/>
-    <input type="hidden" name="__token__" value="{$Request.token}"/>
+    <input type="text" name="__token__" value="{$Request.token}"/>
     <input type="submit" class="btn" value="提交">
 </form>
+<div class="copyright">
+    <a href="http://www.thinkphp.cn" title="官方网站">ThinkPHP</a>
+    <span>V5</span>
+    <span>{ 十年磨一剑-为API开发设计的高性能框架}</span>
+</div>
 </body>
 </html>

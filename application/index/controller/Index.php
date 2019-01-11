@@ -4,30 +4,25 @@ namespace app\index\controller;
 
 use think\Controller;
 use think\Db;
-use app\index\model\Data;
+use app\index\model\think_data\Data;
+
+//use app\index\model\maccms10\Type;
 
 class Index extends Controller
 {
     public function index()
     {
-//        $data = new Data;
-//        $data->data = '你好';
-//        $data->save();
-//        print_r('插入成功');
+//        $user = Data::get(1);
+//        echo $user->data . '<br/>';
+//        $user->data = '你是谁';
+//        echo $user->data . '<br/>';
+//        echo $user;
+//        $list = Data::scope('email', '你好');
+//        print_r($list);
+//        $list = Type::scope('type_en', 'dianying')->all();
+//        print_r($list);
 
-//        $dataArr['data'] = '你好88';
-//        $dataArr['data'] = '你好8';
-//        if ($result = Data::create($dataArr))
-//            echo "id" . $result->id . "data" . $result->data;
-
-//        $data = Data::get(1);
-//        echo $data->id . "   " . $data['data'];
-//        $result = Db::connect('maccms8')->query('select * from mac_vod');
-//        $result = Db::connect('maccms10')->query('select * from mac_vod where vod_id=1');
-//        print_r($result);
-
-
-
+//        print_r(Type::find());
     }
 
     public function hello5()

@@ -10,7 +10,7 @@ namespace app\index\model\maccms10;
 
 use think\Model;
 
-class vod extends Model
+class type extends Model
 {
     // 设置完整的数据表（包含前缀）
     //protected $table = 'mac_vod';
@@ -40,4 +40,9 @@ class vod extends Model
         // 数据库调试模式
         'debug' => true,
     ];
+
+    protected function scopeTypeEn($query, $a)
+    {
+        $query->where('type_en', $a);
+    }
 }
