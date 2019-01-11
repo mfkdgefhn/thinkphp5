@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2 {
+            position: absolute;
+            left: 220px;
+            top: 65px;
+            text-align: center;
+            margin: 0;
+            color: #6289A9;
+        }
+
+        hr {
+            position: absolute;
+            top: 95px;
+            width: 100%;
+            border: 0.5px solid #DFDFDE;
+        }
+
+        .form {
+            position: absolute;
+            display: inline-block;
+            top: 100px;
+            left: 100px;
+            width: 300px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 10px;
+        }
+
+        .text {
+            border: 1px solid #DFDFDE;
+            width: 150px;
+            margin-bottom: 5px;
+            margin-top: 0px;
+        }
+
+        .btn {
+            background: #EAEAE9;
+            width: 80px;
+            height: 30px;
+            font-size: 12px;
+            border: 1px solid #DFDFDE;
+
+        }
+    </style>
+</head>
+<body>
+
+<h2>创建用户</h2>
+<hr>
+<form method="post" class="form" action="{:url('index/user/add')}">
+    昵称：<input type="text" class="text" name="nickname"><br/>
+    邮箱：<input type="text" class="text" name="email"><br/>
+    生日：<input type="text" class="text" name="birthday"><br/>
+    <input type="hidden" name="__token__" value="{$Request.token}"/>
+    <input type="submit" class="btn" value="提交">
+</form>
+</body>
+</html>

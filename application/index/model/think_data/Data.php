@@ -12,5 +12,14 @@ use think\Model;
 
 class Data extends Model
 {
+    public function setEmail1Attr($value, $user)
+    {
+
+    }
+
+    protected function scopeEmail($query, $aa)
+    {
+        $query->where('data', $aa);
+    }
 
 }
